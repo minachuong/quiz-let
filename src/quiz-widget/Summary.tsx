@@ -26,7 +26,7 @@ export const Summary = (props: SummaryProps) => {
       </h2>
       <p style={largeTextStyles}>{props.message}</p>
       <p style={largeTextStyles}>You had:</p>
-      <ol type="1" style={{paddingLeft: '24%',}}>
+      <ol type="1" style={{paddingLeft: '24%', textAlign: 'justify'}}>
       {props.answerSummaries.map(answerSummary => (
         <li key={answerSummary.question} style={{paddingLeft: '.6rem'}}>
           <span>{answerSummary.question}</span>

@@ -11,10 +11,10 @@ export const useGetQuizzes = (): [Quiz[], boolean, any] => {
     getQuizzes()
       .then((quizzes) => {
         setQuizzes(quizzes);
-        setIsLoading(false);
       })
       .catch((e) => {
         setError(e);
+      }).finally(() => {
         setIsLoading(false);
       });
   }, []);
